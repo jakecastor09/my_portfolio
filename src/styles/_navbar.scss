@@ -1,0 +1,61 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 115rem;
+  &__logo {
+    font-size: 6.1rem;
+    font-weight: 400;
+    font-family: 'Righteous';
+    text-align: left;
+  }
+  &__items {
+    list-style: none;
+    margin-left: 20rem;
+  }
+  &__item {
+    margin: 0 4rem;
+    font-size: 1.7rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 1.5rem;
+      height: 0.3rem;
+      background-color: $color-primary;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY(1.1rem);
+      transition: width 0.3s;
+      animation: lineAnimation 1.4s;
+    }
+    &:hover:after {
+      width: 100%;
+    }
+  }
+  &__contact-number {
+  }
+  &__mobile-icon {
+    color: $color-primary;
+  }
+  &__number {
+    margin-left: 0.7rem;
+  }
+}
+
+@keyframes lineAnimation {
+  0% {
+    width: 0rem;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 1.5rem;
+  }
+}
