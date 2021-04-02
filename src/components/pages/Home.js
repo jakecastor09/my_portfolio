@@ -1,14 +1,14 @@
 import React from 'react';
 import myPicture from '../../img/jake.png';
-import Navbar from '../Navbar';
 
 const Home = () => {
   return (
     <main className="home">
-      <Navbar />
       <div className="home__layout">
         <div className="home__left">
-          <img className="home__img" src={myPicture} alt="Jake" />
+          <div className="home__img-container">
+            <img className="home__img" src={myPicture} alt="Jake" />
+          </div>
         </div>
         <div className="home__right">
           <div className="home__right-content">

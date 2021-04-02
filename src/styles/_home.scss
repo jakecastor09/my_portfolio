@@ -12,14 +12,16 @@
     justify-content: center;
     align-items: flex-end;
   }
+
   &__img {
     transform: translate(23rem, 1rem);
-    border-radius: 50%;
-    border-style: solid;
-    border-width: 5px;
-    border-color: $color-secondary $color-primary;
-    width: 45rem;
-    height: 45rem;
+    
+    border-radius:50%;
+    width: 46rem;
+    height: 46rem;
+    
+    animation: mover 1s infinite  alternate;
+    
   }
   &__right {
     background-color: $color-secondary;
@@ -44,4 +46,19 @@
       font-size: 2.1rem;
     }
   }
+}
+
+@keyframes mover {
+    0% { 
+      transform: translate(23rem,1rem);
+      box-shadow:0 .5rem 3rem .5rem rgba(0,0,0,.5); 
+      border: 2rem solid $color-primary;
+      
+    }
+    100% { transform: translate(23rem,-1rem); 
+    box-shadow:0 .5rem 1rem .5rem rgba(0,0,0,.5);
+    border: 2rem solid $color-secondary;
+    
+    
+    }
 }
